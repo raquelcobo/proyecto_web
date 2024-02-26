@@ -1,0 +1,103 @@
+:root {
+    --colorFondoMenu: #F6A675;
+    --fuenteLetra: Arial, Helvetica, sans-serif;
+    --colorLetraNav: white;
+    --colorLetra: white;
+    --colorLetraHoverNav: #BB62D4;
+    --colorFondoPagina: #BB62D4;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--fuenteLetra);
+}
+
+/*.menu ul, .logo {
+    display: flex;
+    background: var(--colorFondoMenu);
+    justify-content: space-around;
+    height: 5rem;
+}*/
+
+.menu ul {
+    display: flex;
+    background: var(--colorFondoMenu);
+    justify-content: space-between; 
+    align-items: center; 
+    height: 4rem;
+    padding: 0 0.7rem; 
+}
+
+.logo {
+    padding: 0; 
+}
+
+.logo img {
+    height: 4rem; 
+    width: auto; 
+}
+.opcionMenu {
+    padding: 2rem;
+    list-style-type: none;
+} 
+
+.opcionMenu a {
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--colorLetraNav);
+    transition: color 0.6s ease;
+}
+
+.opcionMenu a:hover {
+    color: var(--colorLetraHoverNav);
+    transition: color 0.6s ease;
+}
+
+body {
+    background: var(--colorFondoPagina);
+}
+
+.titulo, p {
+    text-align: center; 
+    margin: 15px auto;     
+    color: var(--colorLetra);
+}
+
+.titulo {
+    font-weight: bold;    
+}
+
+
+.cartel .flecha {
+    width: 45rem;
+    display: block;
+    margin: 20px auto;
+    border-radius: 10px;
+    animation: aparecerDesdeAbajo 1s ease-out forwards;
+    opacity: 0; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@keyframes aparecerDesdeAbajo {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
