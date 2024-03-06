@@ -60,7 +60,7 @@ body {
     background: var(--colorFondoPagina);
 }
 
-.titulo, p {
+.titulo, .subtitulo {
     text-align: center; 
     margin: 15px auto;     
     color: var(--colorLetra);
@@ -70,30 +70,46 @@ body {
     font-weight: bold;    
 }
 
-
-.cartel .flecha {
+#imagenes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.cartel{
     width: 45rem;
     display: block;
     margin: 20px auto;
     border-radius: 10px;
     animation: aparecerDesdeAbajo 1s ease-out forwards;
-    opacity: 0; 
+    
 }
 
+.flecha{
+    height: 2.5rem;
+    width: 6rem;
+    animation: aparecerDesdeAbajo2 1.1s ease-out forwards;
+}
 
-
-
-
-
-
-
-
+p {
+    
+}
 
 
 
 @keyframes aparecerDesdeAbajo {
     from {
         transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes aparecerDesdeAbajo2 {
+    from {
+        transform: translateY(800%);
         opacity: 0;
     }
     to {
