@@ -1,0 +1,241 @@
+:root {
+    --colorFondoMenu: #F6A675;
+    --colorFondoSubmenu: #ffbd94;
+    --colorBordeSubmenu: #ffffff;
+    --fuenteLetra: Arial, Helvetica, sans-serif;
+    --colorLetraNav: white;
+    --colorLetra: white;
+    --colorLetraHoverNav: #d286f5;
+    --colorFondoPagina: #BB62D4;
+    --colorActivoNav: #BB62D4;
+    --colorBloqueIzq: #ee865e;
+    --colorBloqueDer: #75c6e0;
+}
+/*
+#add8e6
+*/
+/* Global */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--fuenteLetra);
+}
+
+/* Barra de navegación */
+
+.menu ul {
+    display: flex;
+    background: var(--colorFondoMenu);
+    justify-content: space-between; 
+    align-items: center; 
+    height: 4rem;
+    padding: 0 0.7rem; 
+}
+
+.logo {
+    padding: 0; 
+}
+
+.logo img {
+    height: 4rem; 
+    width: auto; 
+}
+
+.opcionMenu {
+    padding: 6rem;
+    list-style-type: none;
+    position: relative; 
+} 
+
+.opcionMenu a {
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--colorLetraNav);
+    transition: color 0.6s ease;
+}
+
+.opcionMenu a:hover {
+    color: var(--colorLetraHoverNav);
+    transition: color 0.6s ease;
+}
+
+/* Submenu */
+
+.submenu {
+    visibility: hidden;
+    display: none;
+    position: absolute;
+    top: 70%;
+    left: 25%;
+    background: var(--colorFondoSubmenu) !important;
+    border-top: 2px solid var(--colorBordeSubmenu);
+    border-radius: 0 0 5px 5px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+    height: auto !important;
+    width: 50%;
+    z-index: 1;
+}
+
+.opcionMenu:hover .submenu {
+    visibility: visible;
+    display: block;
+}
+
+.submenu li {
+    padding: 0.5rem;
+    list-style-type: none;
+}
+
+.submenu li a {
+    color: var(--colorLetraNav);
+    text-decoration: none;
+    display: block; 
+    transition: color 0.6s ease;
+}
+
+.submenu li a:hover {
+    color: var(--colorLetraHoverNav);
+}
+
+.activo{
+    color: var(--colorActivoNav) !important;
+}
+
+/* Página */
+
+body {
+    background: var(--colorFondoPagina);
+}
+
+.negritaCentrado {
+    font-weight: bold;
+    text-align: center; 
+}
+
+.negrita {
+    font-weight: bold;
+}
+
+.contenido {
+    display: flex;
+    margin: 20px;
+}
+
+/* INICIO */
+
+.titulo, .subtitulo {
+    text-align: center; 
+    margin: 20px auto;     
+    color: var(--colorLetra);
+}
+
+.titulo {
+    font-weight: bold;    
+}
+
+#imagenesInicio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cartel{
+    width: 55rem;
+    display: block;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    animation: aparecerDesdeAbajo 1s ease-out forwards;
+
+}
+
+.flecha{
+    height: 2.5rem;
+    width: 6rem;
+    animation: aparecerDesdeAbajo2 1.1s ease-out forwards;
+}
+
+.textoInicio {
+    color: var(--colorLetra);
+    margin: 2rem;  
+    animation: aparecerDesdeAbajo 1.1s ease-out forwards;
+}
+
+/* HISTORIA */
+
+.titulo2 {
+    font-weight: bold; 
+    color: var(--colorLetra);
+    margin-bottom: 4px;
+}
+
+.historiaIzquierdo {
+    flex: 2.3;
+    padding: 20px;
+    background-color: var(--colorBloqueIzq);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin-right: 20px; 
+    animation: aparecerDesdeAbajo 1s ease-out forwards;
+}
+
+.historiaDerecho {
+    flex: 0.7;
+    padding: 20px;
+    background-color: var(--colorBloqueDer);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin-left: 20px;
+    animation: aparecerDesdeAbajo 1s ease-out forwards;
+}
+
+.parrafo {
+    color: var(--colorLetra);
+    line-height: 1.5; 
+}
+
+.historiaDerecho img {
+    width: 60%;
+    height: auto;
+    margin-top: 2px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+/* EQUIPO */
+
+.equipo {
+    padding: 20px;
+    background-color: var(--colorBloqueDer);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin-left: 20px;
+    animation: aparecerDesdeAbajo 1s ease-out forwards;
+}
+
+/* ANIMACIONES */
+@keyframes aparecerDesdeAbajo {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes aparecerDesdeAbajo2 {
+    from {
+        transform: translateY(800%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
