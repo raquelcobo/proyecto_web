@@ -373,7 +373,7 @@ body {
 
 /* MÓVILES */
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 700px) {
 
     .menu ul {
         flex-direction: column;
@@ -395,18 +395,17 @@ body {
 
     .contenido {
         flex-direction: column;
-        margin: 10px;
+        margin: 5px;
         align-items: center;
     }
 
-    .contenido2 {
+    .contenido2 div {
         flex-direction: column;
-        margin: 10px;
+        margin: 5px;
         align-items: center;
     }
 
     .contenido div{
-
         margin: 10px;
     }
 
@@ -431,7 +430,9 @@ body {
     .flecha {
         width: 5rem;
     }
-
+    .noticia {
+        margin: 10px;
+    }
     .noticia img {
         width: 100%;
         margin-right: 0;
