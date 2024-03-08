@@ -16,6 +16,11 @@
     --colorBloqueEquipoInfo: #ca92ff;
     --colorBloqueEquipo: #ee865e;
     --colorBloqueEquipo2: #75c6e0;
+    --colorBloqueNoticias: #ca92ff;
+    --colorBloqueEvento: #75c6e0;
+    --colorBoton: #358ce9;
+    --botonHover: #0056b3;
+    --colorAlertaEntradas: #0058b6;
 }
 /*
 #80dbfa
@@ -145,6 +150,13 @@ body {
 .parrafo {
     color: var(--colorLetra);
     line-height: 1.5; 
+    text-align: justify;
+}
+
+.parrafo2 {
+    color: var(--colorLetra);
+    line-height: 2; 
+    text-align: justify;
 }
 
 /* INICIO */
@@ -328,7 +340,7 @@ body {
 
 .noticia {
     padding: 35px;
-    background-color: var(--colorBloqueEquipoInfo);
+    background-color: var(--colorBloqueNoticias);
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     margin-bottom: 20px;
@@ -340,6 +352,7 @@ body {
 .noticiaCont {
     display: flex;
     align-items: center;
+    color: var(--colorLetra);
 }
 
 .noticia img {
@@ -348,17 +361,71 @@ body {
     border-radius: 5px;
 }
 
-.noticiaDesc {
-    color: var(--colorLetra);
-    text-align: justify;
-}
-
-
-
-
 /* EVENTOS */
 
+.evento {
+    padding: 35px;
+    background-color: var(--colorBloqueEvento);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
+    width: 100%;
+    animation: aparecerDesdeAbajo 1.2s ease-out forwards; 
+    display: flex;
+    align-items: center;
+}
 
+.fecha {
+    width: 20%;
+    margin-right: 20px;
+    flex: 1;
+}
+
+.dia {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+    margin-left: 20%;
+    color: var(--colorLetra);
+}
+
+.mes {
+    font-size: 1.2rem;
+    color: var(--colorLetra)
+}
+
+.eventoCont {
+    margin-right: 20px;
+    flex: 15;
+}
+
+.infoEntradas {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.textoEntradas {
+    color: var(--colorAlertaEntradas);
+    font-size: 0.7rem;
+    margin-bottom: 5px;
+    margin-right: 5px;
+}
+
+.botonComprar {
+    padding: 10px 20px;
+    background-color: var(--colorBoton);
+    color: var(--colorLetra);
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.botonComprar:hover {
+    background-color: var(--botonHover);
+}
 
 
 
@@ -418,6 +485,8 @@ body {
         font-size: 16px;
     }
 
+    /* INICIO */
+
     .titulo, .subtitulo {
         font-size: 24px;
     }
@@ -430,8 +499,11 @@ body {
     .flecha {
         width: 5rem;
     }
+
+    /* NOTICIAS */
+
     .noticia {
-        margin: 10px;
+        padding: 20px;
     }
     .noticia img {
         width: 100%;
@@ -441,9 +513,59 @@ body {
 
     .noticiaCont {
         flex-direction: column;
-        align-items: center; 
+        align-items: center;
+
     }
 
+    /* EVENTOS */
+
+    .evento {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .fecha {
+        width: 20%;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .dia {
+        font-size: 1.5rem;
+        margin-bottom: 2px;
+    }
+
+    .mes {
+        font-size: 1rem;
+    }
+
+    .eventoCont {
+        flex: 1;
+        margin-right: 0;
+        font-size: 1rem;
+
+    }
+
+    .infoEntradas {
+        align-self: flex-start;
+    }
+
+    .textoEntradas {
+        font-size: 0.8rem;
+        margin-bottom: 5px;
+        margin-right: 0;
+    }
+
+    .botonComprar {
+        padding: 8px 16px;
+    }
+
+    .eventoCont {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    /* EDICIONES*/
 
 }
 
