@@ -11,22 +11,22 @@
         
         <nav class="menu">
             <ul>
-                <li class="logo"><img src="./img/ot2023.png" alt="Logo de Operación Triunfo"></li>
-                <li class="opcionMenu"><a href="#inicio" class="activo">INICIO</a>
+                <li class="logo"><img src="./img/otlogo.png" alt="Logo de Operación Triunfo"></li>
+                <li class="opcionMenu"><a href="#inicio" id="activoNav">INICIO</a>
                     <ul class="submenu">
-                        <li><a href="#Inicio" class="activo">Inicio</a></li>
+                        <li><a href="#Inicio" id="activo">Inicio</a></li>
                         <li><a href="./portfolio/historia.html">Historia</a></li>
                         <li><a href="./portfolio/equipo.html">Equipo</a></li>
                     </ul>
                 </li>
-                <li class="opcionMenu"><a href="#noticias">NOTICIAS</a></li>
-                <li class="opcionMenu"><a href="#eventos">EVENTOS</a></li>
+                <li class="opcionMenu"><a href="./portfolio/noticias.html">NOTICIAS</a></li>
+                <li class="opcionMenu"><a href="./portfolio/eventos.html">EVENTOS</a></li>
                 <li class="opcionMenu"><a href="#ediciones">EDICIONES</a>
                     <ul class="submenu">
-                        <li><a href="#OT2023">OT2023</a></li>
-                        <li><a href="#OT2020">OT2020</a></li>
-                        <li><a href="#OT2018">OT2018</a></li>
-                        <li><a href="#OT2017">OT2017</a></li>
+                        <li><a href="./portfolio/ediciones/OT2023.html">OT2023</a></li>
+                        <li><a href="./portfolio/ediciones/OT2020.html">OT2020</a></li>
+                        <li><a href="./portfolio/ediciones/OT2018.html">OT2018</a></li>
+                        <li><a href="./portfolio/ediciones/OT2017.html">OT2017</a></li>
                     </ul>
                 </li>
             </ul>
@@ -36,34 +36,40 @@
         <section>
             <h1 class="titulo">BIENVENIDO/A</h1>
             <p class="subtitulo">TODAS LAS NOVEDADES SOBRE OPERACIÓN TRIUNFO</p>
-        </section>
-        <section id="imagenesInicio">
-            <img class="cartel" src="./img/header.jpg" alt="Cartel de Operación Triunfo">
-            <img class="flecha" src="./img/dobleFlecha.png" alt="Doble flecha">
-        </section>
-        <section class="textoInicio">
-            <p class="negritaCentrado">Bienvenido/a a DirectOT!</p>
-                <br><br>
-            <p>
-                En esta página no oficial, te damos la bienvenida a un espacio dedicado a todo lo relacionado
-                con el fenómeno cultural que es Operación Triunfo. Aquí encontrarás información detallada sobre 
-                las ediciones más recientes del concurso, con un enfoque especial en las cuatro últimas ediciones.
-                <br><br>
-                Sumérgete en el mundo de Operación Triunfo con acceso a actuaciones inolvidables, momentos 
-                destacados de las galas y entrevistas exclusivas con los concursantes. Además, podrás explorar 
-                la historia del programa, desde sus inicios hasta la actualidad, incluyendo récords de audiencia, 
-                datos curiosos y anécdotas memorables.
-                <br><br>
-                Mantente al tanto de las últimas noticias y novedades relacionadas con el programa, desde actualizaciones 
-                sobre los concursantes hasta detalles sobre eventos próximos y colaboraciones especiales. Además, 
-                podrás conocer más sobre el equipo detrás de las cámaras, los directores, profesores y todos aquellos 
-                que hacen posible la magia de Operación Triunfo.
-                <br><br>
-                ¡Prepárate para adentrarte en un mundo lleno de música, emociones y talento! En DirectOT, te invitamos 
-                a explorar y disfrutar de todo lo que este programa icónico tiene para ofrecer. 
-                <br><br>
-                ¡Bienvenido a bordo!
-            </p>
+
+            <div id="imagenesInicio">
+                <picture >
+                    <source class="cartel" media="(min-width:600px)" srcset="./img/header.jpg" alt="Cartel de Operación Triunfo">
+                    <img class="cartel" src="./img/movil/cartelmovil.jpg" alt="Cartel de Operación Triunfo">
+                </picture>
+                <img class="flecha" src="./img/dobleFlecha.png" alt="Doble flecha">
+            </div>
+
+            <div class="textoInicio">
+                <p class="negritaCentrado">Bienvenido/a a DirectOT!</p><br>
+                <div class="divInicio">
+                    <p>
+                        En esta página no oficial, te damos la bienvenida a un espacio dedicado a todo lo relacionado
+                        con el fenómeno cultural que es Operación Triunfo. Aquí encontrarás información detallada sobre 
+                        las ediciones más recientes del concurso, con un enfoque especial en las cuatro últimas ediciones.
+                        <br><br>
+                        Sumérgete en el mundo de Operación Triunfo con acceso a actuaciones inolvidables, momentos 
+                        destacados de las galas y entrevistas exclusivas con los concursantes. Además, podrás explorar 
+                        la historia del programa, desde sus inicios hasta la actualidad, incluyendo récords de audiencia, 
+                        datos curiosos y anécdotas memorables.
+                        <br><br>
+                        Mantente al tanto de las últimas noticias y novedades relacionadas con el programa, desde actualizaciones 
+                        sobre los concursantes hasta detalles sobre eventos próximos y colaboraciones especiales. Además, 
+                        podrás conocer más sobre el equipo detrás de las cámaras, los directores, profesores y todos aquellos 
+                        que hacen posible la magia de Operación Triunfo.
+                        <br><br>
+                        ¡Prepárate para adentrarte en un mundo lleno de música, emociones y talento! En DirectOT, te invitamos 
+                        a explorar y disfrutar de todo lo que este programa icónico tiene para ofrecer. 
+                        <br><br>
+                        ¡Bienvenido a bordo!
+                    </p>
+                </div>
+            </div>
         </section>
     </main>
 </body>
