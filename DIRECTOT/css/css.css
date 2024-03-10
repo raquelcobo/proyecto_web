@@ -21,6 +21,10 @@
     --colorBoton: #358ce9;
     --botonHover: #0056b3;
     --colorAlertaEntradas: #0058b6;
+    --colorBloqueConcursantes: #b1c96f;
+    --colorBloqueConcursantes2: #d286f5;
+    --colorBloqueConcursantes3: #d35050;
+    --colorBloqueConcursantes4: #fa6ab2;
 }
 /*
 #80dbfa
@@ -157,6 +161,10 @@ body {
     color: var(--colorLetra);
     line-height: 2; 
     text-align: justify;
+}
+
+.animacion {
+    animation: aparecerDesdeAbajo2 1s ease-out forwards;
 }
 
 /* INICIO */
@@ -432,11 +440,200 @@ body {
 
 /* EDICIONES */
 
+.concursantes {
+    padding: 35px;
+    background-color: var(--colorBloqueConcursantes);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
+    width: 1300px; /* Ancho suficiente para 8 elementos por fila */
+    animation: aparecerDesdeAbajo 1.2s ease-out forwards; 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 
+}
 
+.concursantes2 {
+    padding: 35px;
+    background-color: var(--colorBloqueConcursantes2);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
+    width: 1300px; /* Ancho suficiente para 8 elementos por fila */
+    animation: aparecerDesdeAbajo 1.2s ease-out forwards; 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 
+}
 
+.concursantes3 {
+    padding: 35px;
+    background-color: var(--colorBloqueConcursantes3);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
+    width: 1300px; /* Ancho suficiente para 8 elementos por fila */
+    animation: aparecerDesdeAbajo 1.2s ease-out forwards; 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 
+}
+
+.concursantes4 {
+    padding: 35px;
+    background-color: var(--colorBloqueConcursantes4);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
+    width: 1300px; /* Ancho suficiente para 8 elementos por fila */
+    animation: aparecerDesdeAbajo 1.2s ease-out forwards; 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.concursante {
+    position: relative;
+    width: calc(12.5% - 10px); /* Ancho para contener exactamente 8 elementos */
+    text-align: center;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    margin: 0 5px; /* Espacio entre las imágenes */
+}
+
+.concursante img {
+    width: 100%;
+    border-radius: 5%;
+    transition: transform 0.3s ease;
+}
+
+.info {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 10px;
+    border-radius: 5px;
+    color: #fff;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.concursante:hover .info {
+    opacity: 1;
+}
+
+.concursante:hover img {
+    transform: scale(1.1);
+    filter: brightness(80%);
+}
+
+.info h3 {
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+.info p {
+    font-size: 14px;
+    margin: 3px 0;
+}
+
+.EdicionesInfo {
+    margin-top: 10px; /* Espacio entre el contenedor de concursantes y la información */
+    padding: 10px;
+    background-color: var(--colorBloqueConcursantes); /* Color de fondo de la información */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    animation: aparecerDesdeAbajo 1.2s ease-out forwards; 
+}
+
+.videos {
+    margin-top: 20px; /* Espacio entre la información y los videos */
+    padding: 20px;
+    background-color: var(--colorBloqueConcursantes); /* Color de fondo de los videos */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    animation: aparecerDesdeAbajo 1.2s ease-out forwards; 
+}
+
+.EdicionesInfo2 {
+    margin-top: 10px; /* Espacio entre el contenedor de concursantes y la información */
+    padding: 10px;
+    background-color: var(--colorBloqueConcursantes2); /* Color de fondo de la información */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    animation: aparecerDesdeAbajo 1.2s ease-out forwards; 
+}
+
+.videos2 {
+    margin-top: 20px; /* Espacio entre la información y los videos */
+    padding: 20px;
+    background-color: var(--colorBloqueConcursantes2); /* Color de fondo de los videos */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    animation: aparecerDesdeAbajo 1.2s ease-out forwards; 
+}
+
+.EdicionesInfo3 {
+    margin-top: 10px; /* Espacio entre el contenedor de concursantes y la información */
+    padding: 10px;
+    background-color: var(--colorBloqueConcursantes3); /* Color de fondo de la información */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    animation: aparecerDesdeAbajo 1.2s ease-out forwards; 
+}
+
+.videos3 {
+    margin-top: 20px; /* Espacio entre la información y los videos */
+    padding: 20px;
+    background-color: var(--colorBloqueConcursantes3); /* Color de fondo de los videos */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    animation: aparecerDesdeAbajo 1.2s ease-out forwards; 
+}
+
+.EdicionesInfo4 {
+    margin-top: 10px; /* Espacio entre el contenedor de concursantes y la información */
+    padding: 10px;
+    background-color: var(--colorBloqueConcursantes4); /* Color de fondo de la información */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    animation: aparecerDesdeAbajo 1.2s ease-out forwards; 
+}
+
+.videos4 {
+    margin-top: 20px; /* Espacio entre la información y los videos */
+    padding: 20px;
+    background-color: var(--colorBloqueConcursantes4); /* Color de fondo de los videos */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    animation: aparecerDesdeAbajo 1.2s ease-out forwards; 
+}
+
+.galas {
+    color: var(--colorLetra); 
+    text-decoration: none;
+    transition: color 0.6s ease;
+    font-weight: bold;
+}
+
+.galas:hover {
+    color: var(--colorLetraHoverNav);
+}
+
+iframe {
+    border: none; /* Elimina el borde del iframe */
+}
+
+#titulo4 {
+    color: var(--colorLetra);
+    margin-bottom: 4px;
+}
 
 /* MÓVILES */
 
@@ -566,6 +763,38 @@ body {
     }
 
     /* EDICIONES*/
+
+.concursantes, .concursantes2, .concursantes3, .concursantes4 {
+    padding: 20px;
+    display: flex;
+    flex-wrap: nowrap; /* Evita que se envuelvan los elementos */
+    overflow-x: auto; /* Agrega desplazamiento horizontal */
+    justify-content: flex-start;
+    width: auto;
+}
+
+.concursante {
+    flex: 0 0 auto; /* Flex: crecimiento 0, reducción 0, tamaño automático */
+    margin-right: 10px; /* Espacio entre las imágenes */
+    width: 50%;
+}
+
+.EdicionesInfo, .EdicionesInfo2, .EdicionesInfo3, .EdicionesInfo4 {
+    font-size: 14px;
+    padding: 10px;
+}
+
+.videos, .videos2, .videos3, .videos4 {
+    padding: 10px;
+}
+
+iframe {
+    margin-bottom: 10px;
+    width: auto;
+    height: auto;
+}
+
+
 
 }
 
