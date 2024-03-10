@@ -1,4 +1,5 @@
 :root {
+    /* COLORES DE LA PÁGINA */
     --colorFondoMenu: #F6A675;
     --colorFondoSubmenu: #75c6e0;
     --colorBordeSubmenu: #ffffff;
@@ -26,34 +27,31 @@
     --colorBloqueConcursantes3: #d35050;
     --colorBloqueConcursantes4: #fa6ab2;
 }
-/*
-#80dbfa
-#add8e6
-*/
 
 /* Global */
 
 * {
-    margin: 0;
+    margin: 0; 
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box; /* Hace que el modelo de caja incluya el relleno y el borde */
     font-family: var(--fuenteLetra);
 }
 
 /* Barra de navegación */
 
 .menu ul {
-    display: flex;
+    display: flex; /* Usa un diseño de caja flexible */
     background: var(--colorFondoMenu);
-    justify-content: space-between; 
-    align-items: center;
+    justify-content: space-between; /* Distribuye los elementos de manera uniforme */
+    align-items: center; /* Centra verticalmente los elementos */
     height: 4rem;
-    width: auto;
-    padding: 0 0.7rem; 
+    width: 100%;
+    padding: 0 0.7rem;
 }
 
 .logo {
-    padding: 0; 
+    padding: 0;
+    list-style-type: none; 
 }
 
 .logo img {
@@ -62,17 +60,17 @@
 }
 
 .opcionMenu {
-    padding: 6rem;
-    list-style-type: none;
-    position: relative; 
+    padding: 4rem;
+    list-style-type: none; /* Elimina la viñeta de la lista */
+    position: relative; /* Posición relativa para elementos secundarios */
 } 
 
 .opcionMenu a {
-    text-align: center;
+    text-align: center; 
     text-decoration: none;
     font-weight: bold;
     color: var(--colorLetraNav);
-    transition: color 0.6s ease;
+    transition: color 0.6s ease; /* Efecto de transición suave para el cambio de color */
 }
 
 .opcionMenu a:hover {
@@ -87,23 +85,21 @@
 /* Submenu */
 
 .menu ul ul {
-    visibility: hidden;
-    display: none;
-    position: absolute;
+    display: none; /* Oculta el submenú por defecto */
+    position: absolute; /* Posición absoluta para ubicar el submenú */
     top: 60%;
     left: 25%;
     background: var(--colorFondoSubmenu);
-    border-top: 2px solid var(--colorBordeSubmenu);
-    border-radius: 0 0 5px 5px;
-    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
-    height: auto;
+    border-top: 0.2rem solid var(--colorBordeSubmenu);
+    border-radius: 0 0 0.5rem 0.5rem; /* Añade esquinas redondeadas */
+    box-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.2); /* Agrega una sombra al submenú */
+    height: auto; 
     width: 50%;
-    z-index: 1;
+    z-index: 1; /* Establece la superposición del submenú */
 }
 
 .opcionMenu:hover .submenu {
-    visibility: visible;
-    display: block;
+    display: block; /* Muestra el submenú */
 }
 
 .submenu li {
@@ -114,7 +110,7 @@
 .submenu li a {
     color: var(--colorLetraNav);
     text-decoration: none;
-    display: block; 
+    display: block; /* Convierte los elementos de lista en bloques */
     transition: color 0.6s ease;
 }
 
@@ -129,7 +125,7 @@
 /* Página */
 
 body {
-    background-image: url(../img/fondo.png);
+    background-image: url(../img/fondo.webp);
 }
 
 .negritaCentrado {
@@ -143,23 +139,23 @@ body {
 
 .contenido {
     display: flex;
-    margin: 20px;
+    margin: 1rem;
 }
 
 .contenido2 {
-    margin: 20px;
+    margin: 1rem;
 }
 
 
 .parrafo {
     color: var(--colorLetra);
-    line-height: 1.5; 
-    text-align: justify;
+    line-height: 1.5; /* Establece la altura de línea del párrafo */
+    text-align: justify; /* Justifica el texto */
 }
 
 .parrafo2 {
     color: var(--colorLetra);
-    line-height: 2; 
+    line-height: 2;
     text-align: justify;
 }
 
@@ -171,7 +167,7 @@ body {
 
 .titulo, .subtitulo {
     text-align: center; 
-    margin: 20px auto;     
+    margin: 1.2rem auto;     
     color: var(--colorLetra);
 }
 
@@ -181,18 +177,17 @@ body {
 
 #imagenesInicio {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: column; /* Establece la dirección de la columna */
+    align-items: center; 
 }
 
 .cartel{
     width: 55rem;
-    display: block;
-    margin: 20px auto;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    display: block; /* Muestra el cartel como bloque */
+    margin: 1.5rem auto;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3);
     animation: aparecerDesdeAbajo 1s ease-out forwards;
-
 }
 
 .flecha{
@@ -209,40 +204,39 @@ body {
 }
 
 .divInicio {
-    padding: 20px;
+    padding: 1.5rem;
     background-color: var(--colorBloqueInicio);
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    margin-left: 20px;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5);
     animation: aparecerDesdeAbajo 0.9s ease-out forwards;
 }
 
 /* HISTORIA */
 
-#titulo2 {
+.titulo2 {
     font-weight: bold; 
     color: var(--colorLetra);
-    margin-bottom: 4px;
+    margin-bottom: 0.2rem;
 }
 
 .historiaIzquierdo {
     flex: 2.3;
-    padding: 20px;
+    padding: 1.5rem;
     background-color: var(--colorBloqueIzq);
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    margin-right: 20px; 
+    border-radius: 0.5rem;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5);
+    margin-right: 1.5rem; 
     text-align: justify;
     animation: aparecerDesdeAbajo3 1.2s ease-out forwards;
 }
 
 .historiaDerecho {
     flex: 0.7;
-    padding: 20px;
+    padding: 1.5rem;
     background-color: var(--colorBloqueDer);
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    margin-left: 20px;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5);
+    margin-left: 0.8rem;
     text-align: justify;
     animation: aparecerDesdeAbajo3 1.2s ease-out forwards;
 }
@@ -250,7 +244,7 @@ body {
 .historiaDerecho img {
     width: 60%;
     height: auto;
-    margin-top: 2px;
+    margin-top: 1rem;
     margin-left: auto;
     margin-right: auto;
     display: block;
@@ -259,16 +253,15 @@ body {
 /* TABLA HISTORIA */
 
 .contenedorTabla {
-    margin: 20px;
-    margin-left: 70px;
+    margin: 1.5rem;
+    margin-left: 5rem;
 }
 
 .tablaHistoria {
     width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px; 
+    margin-top: 1.5rem; 
     font-size: 1em;
-    border-radius: 10px;
+    border-radius: 0;
     overflow: hidden;
     animation: aparecerDesdeAbajo 1s ease-out forwards;
 }
@@ -277,57 +270,51 @@ body {
     background-color: var(--fondoClaro);
     color: var(--colorLetra);
     font-weight: bold;
-    padding: 10px;
+    padding: 0.5rem;
     text-align: left;
-    border-bottom: 2px solid var(--colorBordeSubmenu);
+    border-bottom: 0.15rem solid var(--colorBordeSubmenu);
     text-align: center;
 }
 
 .tablaHistoria td {
     background-color: var(--colorBloqueDer);
     color: var(--colorLetra);
-    padding: 10px;
-    border-bottom: 1px solid var(--colorBordeSubmenu);
+    padding: 0.6rem;
+    border-bottom: 0.1rem solid var(--colorBordeSubmenu);
 }
 
 .tablaHistoria tr:last-child td {
     border-bottom: none;
 }
 
-.tablaHistoria tr:nth-child(even) {
-    background-color: #f2f2f2;
-}
-
-
 /* EQUIPO */
 .equipoInfo {
-    padding: 35px;
+    padding: 1.7rem;
     background-color: var(--colorBloqueEquipoInfo);
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    margin-bottom: 20px;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5);;
     animation: aparecerDesdeAbajo 1s ease-out forwards; 
     text-align: justify;
 }
 .equipo {
     flex: 1.5;
-    padding: 35px;
+    padding: 1.7rem;
     background-color: var(--colorBloqueEquipo);
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    margin-top: 20px;
-    margin-right: 20px;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5);
+    margin-top: 0.5rem;
+    margin-right: 1rem;
     animation: aparecerDesdeAbajo3 1s ease-out forwards;
 }
 
 .equipo2 {
     flex: 1.5;
-    padding: 35px;
+    padding: 1.7rem;
     background-color: var(--colorBloqueEquipo2);
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    margin-top: 20px;
-    margin-left: 20px;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5);
+    margin-top: 0.5rem;
+    margin-left: 1rem;
     animation: aparecerDesdeAbajo3 1s ease-out forwards;
     text-align: justify;
 }
@@ -335,23 +322,23 @@ body {
 .imgEquipo {
     width: 40%;
     display: block;
-    margin: 20px auto;
+    margin: 0.9rem auto;
 }
 
-#titulo3 {
+.titulo3 {
     color: var(--colorLetra);
-    margin-bottom: 4px;
+    margin-bottom: 0.2rem;
     text-align: center;
 }
 
 /* NOTICIAS */
 
 .noticia {
-    padding: 35px;
+    padding: 1.5rem;
     background-color: var(--colorBloqueNoticias);
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    margin-bottom: 20px;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5);
+    margin-bottom: 1rem;
     width: 100%;
     animation: aparecerDesdeAbajo 1.2s ease-out forwards; 
     text-align: justify;
@@ -365,18 +352,18 @@ body {
 
 .noticia img {
     width: 20%;
-    margin-right: 20px;
-    border-radius: 5px;
+    margin-right: 1.5rem;
+    border-radius: 0.5rem;
 }
 
 /* EVENTOS */
 
 .evento {
-    padding: 35px;
+    padding: 1.5rem;
     background-color: var(--colorBloqueEvento);
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    margin-bottom: 20px;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5);
+    margin-bottom: 1rem;
     width: 100%;
     animation: aparecerDesdeAbajo 1.2s ease-out forwards; 
     display: flex;
@@ -385,14 +372,14 @@ body {
 
 .fecha {
     width: 20%;
-    margin-right: 20px;
+    margin-right: 1.5rem;
     flex: 1;
 }
 
 .dia {
     font-size: 2rem;
     font-weight: bold;
-    margin-bottom: 5px;
+    margin-bottom: 0.3rem;
     margin-left: 20%;
     color: var(--colorLetra);
 }
@@ -403,8 +390,8 @@ body {
 }
 
 .eventoCont {
-    margin-right: 20px;
-    flex: 15;
+    margin-right: 1.5rem;
+    flex: 15; 
 }
 
 .infoEntradas {
@@ -416,16 +403,16 @@ body {
 .textoEntradas {
     color: var(--colorAlertaEntradas);
     font-size: 0.7rem;
-    margin-bottom: 5px;
-    margin-right: 5px;
+    margin-bottom: 0.3rem;
+    margin-right: 0.3rem;
 }
 
 .botonComprar {
-    padding: 10px 20px;
+    padding: 0.5rem 1.5rem;
     background-color: var(--colorBoton);
     color: var(--colorLetra);
     border: none;
-    border-radius: 5px;
+    border-radius: 0.3rem;
     text-decoration: none;
     font-weight: bold;
     transition: background-color 0.3s ease;
@@ -435,18 +422,15 @@ body {
     background-color: var(--botonHover);
 }
 
-
-
-
 /* EDICIONES */
 
 .concursantes {
-    padding: 35px;
+    padding: 1.7rem;
     background-color: var(--colorBloqueConcursantes);
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    margin-bottom: 20px;
-    width: 1300px; /* Ancho suficiente para 8 elementos por fila */
+    border-radius: 0.5rem;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5);
+    margin-bottom: 1.5rem;
+    width: 85rem;
     animation: aparecerDesdeAbajo 1.2s ease-out forwards; 
     display: flex;
     flex-wrap: wrap;
@@ -455,12 +439,12 @@ body {
 }
 
 .concursantes2 {
-    padding: 35px;
+    padding: 1.7rem;
     background-color: var(--colorBloqueConcursantes2);
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    margin-bottom: 20px;
-    width: 1300px; /* Ancho suficiente para 8 elementos por fila */
+    border-radius: 0.5rem;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5);
+    margin-bottom: 1.5rem;
+    width: 85rem;
     animation: aparecerDesdeAbajo 1.2s ease-out forwards; 
     display: flex;
     flex-wrap: wrap;
@@ -469,12 +453,12 @@ body {
 }
 
 .concursantes3 {
-    padding: 35px;
+    padding: 1.7rem;
     background-color: var(--colorBloqueConcursantes3);
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    margin-bottom: 20px;
-    width: 1300px; /* Ancho suficiente para 8 elementos por fila */
+    border-radius: 0.5rem;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5);
+    margin-bottom: 1.5rem;
+    width: 85rem;
     animation: aparecerDesdeAbajo 1.2s ease-out forwards; 
     display: flex;
     flex-wrap: wrap;
@@ -483,12 +467,12 @@ body {
 }
 
 .concursantes4 {
-    padding: 35px;
+    padding: 1.7rem;
     background-color: var(--colorBloqueConcursantes4);
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    margin-bottom: 20px;
-    width: 1300px; /* Ancho suficiente para 8 elementos por fila */
+    border-radius: 0.5rem;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5);
+    margin-bottom: 1.5rem;
+    width: 85rem;
     animation: aparecerDesdeAbajo 1.2s ease-out forwards; 
     display: flex;
     flex-wrap: wrap;
@@ -498,10 +482,11 @@ body {
 
 .concursante {
     position: relative;
-    width: calc(12.5% - 10px); /* Ancho para contener exactamente 8 elementos */
+    width: calc(12% - 0.5rem); /* Ancho para contener exactamente 8 elementos -
+    12% del añcho total - 0.5rem de espacio adicional */
     text-align: center;
     transition: transform 0.3s ease, filter 0.3s ease;
-    margin: 0 5px; /* Espacio entre las imágenes */
+    margin: 0 0.3rem; /* Espacio entre las imágenes */
 }
 
 .concursante img {
@@ -514,13 +499,13 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); /* Centra el elemento completamente en el medio del contenedor */ 
     background-color: rgba(0, 0, 0, 0.4);
-    padding: 10px;
-    border-radius: 5px;
-    color: #fff;
+    padding: 0.5rem;
+    border-radius: 0.3rem;
+    color: var(--colorLetra);
     opacity: 0;
-    pointer-events: none;
+    pointer-events: none; /* Deshabilita las interacciones con el ratón */
     transition: opacity 0.3s ease;
 }
 
@@ -529,89 +514,89 @@ body {
 }
 
 .concursante:hover img {
-    transform: scale(1.1);
-    filter: brightness(80%);
+    transform: scale(1.1); /* Amplia las dimensiones un 10% tanto de ancho como de alto */
+    filter: brightness(80%); /* Reduce el brillo a la imagen */
 }
 
 .info h3 {
-    margin-bottom: 5px;
-    font-size: 16px;
+    margin-bottom: 0.3rem;
+    font-size: 1rem;
 }
 
 .info p {
-    font-size: 14px;
-    margin: 3px 0;
+    font-size: 0.8rem;
+    margin: 0.2rem 0;
 }
 
 .EdicionesInfo {
-    margin-top: 10px; /* Espacio entre el contenedor de concursantes y la información */
-    padding: 10px;
-    background-color: var(--colorBloqueConcursantes); /* Color de fondo de la información */
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin-top: 0.5rem; /* Espacio entre el contenedor de concursantes y la información */
+    padding: 0.5rem;
+    background-color: var(--colorBloqueConcursantes);
+    border-radius: 0.5rem;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5);
     animation: aparecerDesdeAbajo 1.2s ease-out forwards; 
 }
 
 .videos {
-    margin-top: 20px; /* Espacio entre la información y los videos */
-    padding: 20px;
-    background-color: var(--colorBloqueConcursantes); /* Color de fondo de los videos */
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin-top: 1.5rem; /* Espacio entre la información y los videos */
+    padding: 1.5rem;
+    background-color: var(--colorBloqueConcursantes);
+    border-radius: 0.5rem;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5);
     animation: aparecerDesdeAbajo 1.2s ease-out forwards; 
 }
 
 .EdicionesInfo2 {
-    margin-top: 10px; /* Espacio entre el contenedor de concursantes y la información */
-    padding: 10px;
-    background-color: var(--colorBloqueConcursantes2); /* Color de fondo de la información */
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin-top: 0.5rem; 
+    padding: 0.5rem;
+    background-color: var(--colorBloqueConcursantes2);
+    border-radius: 0.5rem;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5);
     animation: aparecerDesdeAbajo 1.2s ease-out forwards; 
 }
 
 .videos2 {
-    margin-top: 20px; /* Espacio entre la información y los videos */
-    padding: 20px;
-    background-color: var(--colorBloqueConcursantes2); /* Color de fondo de los videos */
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin-top: 1.5rem;
+    padding: 1.5rem;
+    background-color: var(--colorBloqueConcursantes2);
+    border-radius: 0.5rem;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5);
     animation: aparecerDesdeAbajo 1.2s ease-out forwards; 
 }
 
 .EdicionesInfo3 {
-    margin-top: 10px; /* Espacio entre el contenedor de concursantes y la información */
-    padding: 10px;
-    background-color: var(--colorBloqueConcursantes3); /* Color de fondo de la información */
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    background-color: var(--colorBloqueConcursantes3);
+    border-radius: 0.5rem;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5);
     animation: aparecerDesdeAbajo 1.2s ease-out forwards; 
 }
 
 .videos3 {
-    margin-top: 20px; /* Espacio entre la información y los videos */
-    padding: 20px;
-    background-color: var(--colorBloqueConcursantes3); /* Color de fondo de los videos */
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin-top: 1.5rem;
+    padding: 1.5rem;
+    background-color: var(--colorBloqueConcursantes3);
+    border-radius: 0.5rem;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5);
     animation: aparecerDesdeAbajo 1.2s ease-out forwards; 
 }
 
 .EdicionesInfo4 {
-    margin-top: 10px; /* Espacio entre el contenedor de concursantes y la información */
-    padding: 10px;
-    background-color: var(--colorBloqueConcursantes4); /* Color de fondo de la información */
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    background-color: var(--colorBloqueConcursantes4);
+    border-radius: 0.5rem;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5);
     animation: aparecerDesdeAbajo 1.2s ease-out forwards; 
 }
 
 .videos4 {
-    margin-top: 20px; /* Espacio entre la información y los videos */
-    padding: 20px;
-    background-color: var(--colorBloqueConcursantes4); /* Color de fondo de los videos */
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin-top: 1.5rem;
+    padding: 1.5rem;
+    background-color: var(--colorBloqueConcursantes4);
+    border-radius: 0.5rem;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5);
     animation: aparecerDesdeAbajo 1.2s ease-out forwards; 
 }
 
@@ -630,62 +615,107 @@ iframe {
     border: none; /* Elimina el borde del iframe */
 }
 
-#titulo4 {
+.titulo4 {
     color: var(--colorLetra);
-    margin-bottom: 4px;
+    margin-bottom: 0.4rem;
+    margin-left: 2rem;
+    animation: aparecerDesdeAbajo 1s ease-out forwards;
 }
+
+    /* FOOTER INDEX */
+
+    .redes {
+        list-style-type: none;
+        padding: 0;
+    }
+    
+    .redes li {
+        display: inline-block; /* Las coloca en una fila */
+    }
+    
+    .redes img {
+        width: 1.5rem;
+        height: auto;
+        border-radius: 50%; /* Forma de circulo */
+        margin-left: 2rem;
+        margin-bottom: 0.5rem;
+        transition: transform 0.3s ease;
+    }
+    
+    .redes img:hover {
+        transform: scale(1.1); /* Hace que los iconos se agranden al pasar el raton */
+    }
 
 /* MÓVILES */
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 750px) {
+
+    body {
+        background-image: url(../img/movil/fondomovil.webp);
+    }
+    
 
     .menu ul {
-        flex-direction: column;
+        flex-direction: column; /* Cambia la dirección del nav hacia abajo */
         height: auto;
         text-align: center;
-
     }
 
     .menu ul ul {
         width: auto;
-        margin-top: 10px;
+        margin-top: 0.5rem;
         left: 50%;
-        transform: translateX(-50%);
+        transform: translateX(-50%); /* mueve el elemento hacia la izquierda en un 50% de su propio ancho */
     }
 
     .opcionMenu {
         padding: 1rem;
     }
-
+    
     .contenido {
         flex-direction: column;
-        margin: 5px;
+        margin: 0.3rem;
         align-items: center;
     }
 
     .contenido2 div {
         flex-direction: column;
-        margin: 5px;
+        margin: 1rem 0.2rem;
         align-items: center;
     }
 
-    .contenido div{
-        margin: 10px;
-    }
-
-    .contenedorTabla, .tablaHistoria {
-        height: 0.5px;
-        visibility: hidden;
-    }
-
     .parrafo {
-        font-size: 16px;
+        font-size: 1rem;
+    }
+
+    .contenido div{
+        margin: 0.5rem;
+    }
+
+    .divInicio {
+        margin: 0.2rem;
+    }
+
+    .contenedorTabla {
+        margin-left: 0;
+    }
+
+    .tablaHistoria {
+        width: 100%;
+        margin-left: 0.7rem; 
+        margin-top: 1rem;
+    }
+
+    .tablaHistoria th,
+    .tablaHistoria td {
+        padding: 0.3rem;
+        font-size: 0.8em;
     }
 
     /* INICIO */
 
     .titulo, .subtitulo {
-        font-size: 24px;
+        font-size: 1.5rem;
     }
 
     .cartel {
@@ -700,12 +730,12 @@ iframe {
     /* NOTICIAS */
 
     .noticia {
-        padding: 20px;
+        padding: 1.5rem;
     }
     .noticia img {
         width: 100%;
         margin-right: 0;
-        margin-bottom: 10px;
+        margin-bottom: 0.5rem;
     }
 
     .noticiaCont {
@@ -718,18 +748,18 @@ iframe {
 
     .evento {
         flex-direction: column;
-        padding: 20px;
+        padding: 1rem;
     }
 
     .fecha {
         width: 20%;
         margin-right: 0;
-        margin-bottom: 10px;
+        margin-bottom: 0.5rem;
     }
 
     .dia {
-        font-size: 1.5rem;
-        margin-bottom: 2px;
+        font-size: 2rem;
+        margin-bottom: 0.2rem;
     }
 
     .mes {
@@ -738,76 +768,67 @@ iframe {
 
     .eventoCont {
         flex: 1;
-        margin-right: 0;
         font-size: 1rem;
-
-    }
-
-    .infoEntradas {
-        align-self: flex-start;
     }
 
     .textoEntradas {
-        font-size: 0.8rem;
-        margin-bottom: 5px;
+        font-size: 0.7rem;
+        margin-bottom: 0.1rem;
         margin-right: 0;
     }
 
     .botonComprar {
-        padding: 8px 16px;
-    }
-
-    .eventoCont {
-        margin-right: 0;
-        margin-bottom: 10px;
+        padding: 0.4rem 1rem;
     }
 
     /* EDICIONES*/
 
-.concursantes, .concursantes2, .concursantes3, .concursantes4 {
-    padding: 20px;
-    display: flex;
-    flex-wrap: nowrap; /* Evita que se envuelvan los elementos */
-    overflow-x: auto; /* Agrega desplazamiento horizontal */
-    justify-content: flex-start;
-    width: auto;
-}
+    .concursantes, .concursantes2, .concursantes3, .concursantes4 {
+        padding: 1.5rem;
+        display: flex;
+        flex-wrap: nowrap; /* Evita que se envuelvan los elementos */
+        overflow-x: auto; /* Agrega desplazamiento horizontal */
+        justify-content: flex-start; /* Empieza por el primer concursante */
+        width: auto;
+    }
 
-.concursante {
-    flex: 0 0 auto; /* Flex: crecimiento 0, reducción 0, tamaño automático */
-    margin-right: 10px; /* Espacio entre las imágenes */
-    width: 50%;
-}
+    .concursante {
+        flex: 0 0 auto; /* Flex: crecimiento 0, reducción 0, tamaño automático */
+        margin-right: 0.5rem; /* Espacio entre las imágenes */
+        width: 50%;
+    }
 
-.EdicionesInfo, .EdicionesInfo2, .EdicionesInfo3, .EdicionesInfo4 {
-    font-size: 14px;
-    padding: 10px;
-}
+    .EdicionesInfo, .EdicionesInfo2, .EdicionesInfo3, .EdicionesInfo4 {
+        font-size: 0.7rem;
+        padding: 0.5rem;
+    }
 
-.videos, .videos2, .videos3, .videos4 {
-    padding: 10px;
-}
+    .videos div, .videos2 div, .videos3 div, .videos4 div {
+        padding: 0.5rem;
+        margin-left: 1.5rem;
+    }
 
-iframe {
-    margin-bottom: 10px;
-    width: auto;
-    height: auto;
-}
+    iframe {
+        margin-bottom: 0.5rem;
+        width: auto;
+        height: auto;
+    } 
 
-
-
+    .redes {
+        margin-left: 1.8rem; /* Centra los iconos */
+    }
 }
 
 
 /* ANIMACIONES */
 @keyframes aparecerDesdeAbajo {
     from {
-        transform: translateY(120%);
-        opacity: 0;
+        transform: translateY(120%); /* Desplazamiento hacia abajo desde la posición inicial */
+        opacity: 0; /* Invisible */
     }
     to {
-        transform: translateY(0);
-        opacity: 1;
+        transform: translateY(0); /* Vuelve a su posición inicial */
+        opacity: 1; /* Visible */
     }
 }
 
