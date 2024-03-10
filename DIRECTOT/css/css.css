@@ -608,7 +608,7 @@ body {
 }
 
 .galas:hover {
-    color: var(--colorLetraHoverNav);
+    color: var(--colorBoton);
 }
 
 iframe {
