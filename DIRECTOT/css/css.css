@@ -26,6 +26,8 @@
     --colorBloqueConcursantes2: #d286f5;
     --colorBloqueConcursantes3: #d35050;
     --colorBloqueConcursantes4: #fa6ab2;
+    --colorCampoForm: #d7b1fa;
+    --colorLetraForm: #993bb3;
 }
 
 /* Global */
@@ -646,6 +648,64 @@ iframe {
         transform: scale(1.1); /* Hace que los iconos se agranden al pasar el raton */
     }
 
+    .botonForm {
+        padding: 0.5rem 1.5rem;
+        background-color: var(--colorBoton);
+        color: var(--colorLetra);
+        border: none;
+        border-radius: 0.3rem;
+        text-decoration: none;
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+        margin-left: auto;
+        margin-right: 1rem;
+    }
+    
+    .botonForm:hover {
+        background-color: var(--botonHover);
+    }
+
+    .formulario {
+        max-width: 600px;
+        margin: 0 auto;
+        text-align: center;
+        background-color: var(--colorCampoForm); /* Cambia el color de fondo del formulario */
+        padding: 2rem; /* Añade espacio alrededor del formulario */
+        border-radius: 10px; /* Redondea los bordes del formulario */
+    }
+    
+    .formulario h2 {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+        color: var(--colorLetraForm); /* Cambia el color del texto del título */
+    }
+    
+    .campo {
+        margin-bottom: 1rem;
+        text-align: left; /* Alinea el texto del campo a la izquierda */
+    }
+    
+    .campo label {
+        display: block;
+        font-weight: bold;
+        color: var(--colorLetraForm); /* Cambia el color del texto de la etiqueta */
+    }
+    
+    .campo input {
+        width: calc(100% - 2rem); /* Ajusta el ancho del input para tener margen en ambos lados */
+        padding: 0.5rem;
+        border: 1px solid var(--colorLetraForm); /* Cambia el color del borde del input */
+        border-radius: 5px; /* Redondea los bordes del input */
+        background-color: var(--colorCampoForm); /* Cambia el color de fondo del input */
+        color: var(--colorLetraForm); /* Cambia el color del texto del input */
+    }
+    
+    .botones {
+        margin-top: 1.5rem;
+        text-align: center; /* Centra los botones */
+    }
+    
+
 /* MÓVILES */
 
 @media only screen and (max-width: 750px) {
@@ -815,7 +875,11 @@ iframe {
     } 
 
     .redes {
-        margin-left: 1.8rem; /* Centra los iconos */
+        margin-right: 2.5rem; /* Centra los iconos */
+    }
+
+    .botonForm {
+        margin: 0 auto;
     }
 }
 

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>DirectOT - Formulario</title>
+        <link rel="icon" href="./img/icon.webp">
+        <link rel="stylesheet" type="text/css" href="../css/css.css">
+    </head>
+    <body>
+        <header>
+            <nav class="menu">
+                <ul>
+                    <li class="logo"><img src="../img/otlogo.webp" alt="Logo de Operación Triunfo"></li>
+                    <li class="opcionMenu"><a href="#inicio">INICIO</a>
+                        <ul class="submenu">
+                            <li><a href="../index.html">Inicio</a></li>
+                            <li><a href="./historia.html">Historia</a></li>
+                            <li><a href="./equipo.html">Equipo</a></li>
+                        </ul>
+                    </li>
+                    <li class="opcionMenu"><a href="./noticias.html">NOTICIAS</a></li>
+                    <li class="opcionMenu"><a href="./eventos.html">EVENTOS</a></li>
+                    <li class="opcionMenu"><a href="#ediciones">EDICIONES</a>
+                        <ul class="submenu">
+                            <li><a href="./ediciones/OT2023.html">OT2023</a></li>
+                            <li><a href="./ediciones/OT2020.html">OT2020</a></li>
+                            <li><a href="./ediciones/OT2018.html">OT2018</a></li>
+                            <li><a href="./ediciones/OT2017.html">OT2017</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <div class="contenido2">
+                <div class="formulario">
+                    <h2>Suscríbete para no perderte las novedades sobre Operación Triunfo</h2>
+                    <form action="#" method="post">
+                        <div class="campo">
+                            <label for="nombre">Nombre:</label>
+                            <input type="text" id="nombre" name="nombre" required>
+                        </div>
+                        <div class="campo">
+                            <label for="apellidos">Apellidos:</label>
+                            <input type="text" id="apellidos" name="apellidos" required>
+                        </div>
+                        <div class="campo">
+                            <label for="email">Correo electrónico:</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="botones">
+                            <button type="submit" class="botonForm">Enviar</button>
+                            <button type="reset" class="botonForm">Borrar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </main>           
+    </body>
+</html>
